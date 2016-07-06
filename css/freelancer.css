@@ -519,3 +519,6 @@ p.center {
 section#about.success{
     padding-bottom: 50px;
 }
+#imgMe {
+    max-width: 38%;
+}
