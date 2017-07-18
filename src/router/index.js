@@ -5,10 +5,12 @@ import Home from '../containers/Home';
 import Projects from '../containers/Projects';
 import Project from '../containers/Project';
 import About from '../containers/About';
+import NotFound from '../containers/NotFound';
 
 import {
   BrowserRouter,
   Route,
+  Switch,
 } from 'react-router-dom';
 
 export default class Router extends Component {
@@ -22,10 +24,13 @@ export default class Router extends Component {
     return (
       <BrowserRouter {...routerProps}>
         <Layout>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/about" component={About}/>
-          <Route exact path="/projects" component={Projects}/>
-          <Route path="/projects/:projectId" component={Project}/>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/projects" component={Projects}/>
+            <Route path="/projects/:projectId" component={Project} />
+            <Route component={NotFound} />
+          </Switch>
         </Layout>
       </BrowserRouter>
     )
