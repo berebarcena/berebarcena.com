@@ -8,13 +8,19 @@ import About from '../containers/About';
 
 import {
   BrowserRouter,
-  Route
+  Route,
 } from 'react-router-dom';
 
 export default class Router extends Component {
   render() {
+    // NOTE: routerProps need to be removed once the gh-pages site url is changed to
+    // http://berebarcena.com
+    const routerProps = {};
+    if (process.env.NODE_ENV === 'production') {
+      routerProps.basename = '/berebarcena.com';
+    }
     return (
-      <BrowserRouter>
+      <BrowserRouter {...routerProps}>
         <Layout>
           <Route exact path="/" component={Home}/>
           <Route exact path="/about" component={About}/>
