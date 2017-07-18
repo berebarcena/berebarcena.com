@@ -61,16 +61,21 @@
 
 .flash {
   animation: flash 8s linear infinite;
+
 }
 
 /*fish going left from left */
 @keyframes goLeftfromL {
-  0%, 100%{
+  0%{
     opacity: 1;
-    transform: none;
+    transform: translate(0,0);
+  }
+  9% {
+    opacity: 0;
   }
   10%{
-    transform: translate3d(-80px, 0, 0);
+    opacity: 0;
+    transform: translate3d(-120px, 0, 0);
   }
   11% {
     opacity: 0;
@@ -79,12 +84,21 @@
     opacity: 0;
     transform: translate3d(100vw, 0, 0);
   }
-  16% {
+  19% {
+    opacity: 0;
+  }
+  20% {
     opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
 .move-left-from-left {
-  animation: goLeftfromL 15s linear infinite;
+  animation: goLeftfromL 18s linear infinite;
+
 }
 /*fish going left from right */
 @keyframes goLeftfromR {
@@ -107,7 +121,7 @@
   }
 }
 .move-left-from-right {
-  animation: goLeftfromR 15s linear infinite;
+  animation: goLeftfromR 18s linear infinite;
 }
 
 /*fish going right from left */
@@ -128,7 +142,8 @@
   }
 }
 .move-right-from-left {
-  animation: goRightfromL 15s linear infinite;
+  animation: goRightfromL 18s linear infinite;
+
 }
 
 /*fish going right from right */
@@ -153,7 +168,7 @@
   }
 }
 .move-right-from-right {
-  animation: goRightfromR 15s linear infinite;
+  animation: goRightfromR 18s linear infinite;
 }
 
 /*move and flip fish */
@@ -183,11 +198,8 @@
     transform: translate(0, 0);
   }
 
-
-
 }
 .fish {
-
   .move-rotate {
     animation: moveAndFlip 10s linear infinite;
     perspective: 400px;
