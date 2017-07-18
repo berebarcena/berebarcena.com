@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "My single page app",
   "repository": {
-    "type":"git",
-    "url":"https://github.com/berebarcena/berebarcena.com"
+    "type": "git",
+    "url": "https://github.com/berebarcena/berebarcena.com"
   },
   "license": "MIT",
   "main": "src/app.js",

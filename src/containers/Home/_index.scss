@@ -11,7 +11,7 @@
       width:100%;
       min-height: 100vh;
     }
-    
+
   }
   .intro-text {
     width: 100%;
@@ -22,8 +22,176 @@
       font-size: 2em;
       padding: 1em 0;
       line-height: 1.7;
-      
+
     }
   }
 
+}
+/*background-animation*/
+/*starsfishes*/
+
+@keyframes moveUp {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(0, 25px);
+  }
+}
+
+.up {
+  animation:
+    moveUp 10s linear infinite;
+
+  &.delay {
+    animation-delay: 5s;
+  }
+}
+
+/*waves*/
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0.2;
+  }
+}
+
+.flash {
+  animation: flash 8s linear infinite;
+}
+
+/*fish going left from left */
+@keyframes goLeftfromL {
+  0%, 100%{
+    opacity: 1;
+    transform: none;
+  }
+  10%{
+    transform: translate3d(-80px, 0, 0);
+  }
+  11% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+    transform: translate3d(100vw, 0, 0);
+  }
+  16% {
+    opacity: 0.7;
+  }
+}
+.move-left-from-left {
+  animation: goLeftfromL 15s linear infinite;
+}
+/*fish going left from right */
+@keyframes goLeftfromR {
+  0%, 100%{
+    opacity: 1;
+    transform: none;
+  }
+  85%{
+    transform: translate3d(-100vw, 0, 0);
+  }
+  86% {
+    opacity: 0;
+  }
+  87% {
+    opacity: 0;
+    transform: translate3d(15vw, 0, 0);
+  }
+  90% {
+    opacity: 0.7;
+  }
+}
+.move-left-from-right {
+  animation: goLeftfromR 15s linear infinite;
+}
+
+/*fish going right from left */
+@keyframes goRightfromL {
+  0%, 100%{
+    opacity: 1;
+    transform: none;
+  }
+  80% {
+    transform: translate3d(90vw, 0, 0);
+    opacity: 0.95;
+  }
+  81% {
+    opacity: 0;
+  }
+  85% {
+    transform: translate3d(-18vw, 0, 0);
+  }
+}
+.move-right-from-left {
+  animation: goRightfromL 15s linear infinite;
+}
+
+/*fish going right from right */
+
+@keyframes goRightfromR {
+  0%, 100%{
+    opacity: 1;
+    transform: none;
+  }
+  15% {
+    transform: translate3d(18vw, 0, 0);
+  }
+  16% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: translate3d(-90vw, 0, 0);
+  }
+  35% {
+    opacity: .95;
+  }
+}
+.move-right-from-right {
+  animation: goRightfromR 15s linear infinite;
+}
+
+/*move and flip fish */
+@keyframes moveAndFlip {
+
+  0% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(150px, -50px);
+  }
+
+  31% {
+    transform: translate(150px, -50px) rotateY(180deg);
+  }
+
+  70% {
+    transform: translate(-150px, -50px) rotateY(180deg);
+
+  }
+  71% {
+    transform: translate(-150px, -50px) rotateY(0deg);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+
+
+
+}
+.fish {
+
+  .move-rotate {
+    animation: moveAndFlip 10s linear infinite;
+    perspective: 400px;
+    transform-origin: center;
+
+  }
 }
