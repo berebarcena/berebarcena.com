@@ -1,0 +1,29 @@
+.home {
+  text-align: center;
+  .pattern-undersea {
+    background-color:#b3ebee;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+
+    svg {
+      width:100%;
+      min-height: 100vh;
+    }
+    
+  }
+  .intro-text {
+    width: 100%;
+    position:relative;
+    max-width: 34em;
+    margin: 0 auto;
+    p {
+      font-size: 2em;
+      padding: 1em 0;
+      line-height: 1.7;
+      
+    }
+  }
+
+}
