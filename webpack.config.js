@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var isProduction = process.env.NODE_ENV === "production";
+
 var babelPlugins = [];
 var webpackPlugins = [
   new CopyWebpackPlugin([
@@ -9,7 +10,7 @@ var webpackPlugins = [
     { from: './src/404.html', to: './404.html' },
     { from: './src/static', to: './static' }
   ]),
-  new webpack.optimize.OccurrenceOrderPlugin(true)
+  new webpack.optimize.OccurrenceOrderPlugin(true),
 ];
 
 if (isProduction) {
@@ -26,6 +27,10 @@ if (isProduction) {
     "mode": "wrap",
     "ignoreFilenames": ["node_modules"]
   }]);
+} else {
+  webpackPlugins.push(
+    new webpack.EnvironmentPlugin({ 'NODE_ENV': 'development' })
+  );
 }
 
 
