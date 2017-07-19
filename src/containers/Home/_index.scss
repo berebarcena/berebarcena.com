@@ -16,7 +16,7 @@
 
   }
   .intro-text {
-
+    color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,16 +44,19 @@
     transform: translate(0, 0);
   }
   60% {
-    transform: translate(0, 25px);
+    transform: translate(0, 15px);
   }
 }
 
 .up {
   animation:
-    moveUp 10s linear infinite;
+    moveUp 12s linear infinite;
 
   &.delay {
     animation-delay: 5s;
+  }
+  &.delay2 {
+    animation-delay: 8s;
   }
 }
 
@@ -70,6 +73,22 @@
 
 .flash {
   animation: flash 8s linear infinite;
+
+}
+
+@keyframes rotate {
+  0%, 100%{
+    transform:rotate(0);
+
+  }
+  50%{
+    transform: rotate(35deg);
+  }
+}
+
+.rotate {
+  animation: rotate 8s linear infinite;
+  transform-origin: center;
 
 }
 
@@ -253,6 +272,4 @@
     animation: bubbleUp 18s linear infinite;
     animation-delay: 2s;
   }
-
-
 }

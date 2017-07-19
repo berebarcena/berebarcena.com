@@ -3,8 +3,6 @@
   $footer-height: 100px;
   font-family: $sans-serif-font;
 
-
-
   .page-wrapper {
     max-width: 960px;
     margin: 0 auto;
@@ -20,8 +18,9 @@
     z-index: 100;
 
     a {
-      color: #ffffff;
+      color: #0c1532;
     }
+
     .logo {
       float: left;
       font-size: 18px;
@@ -39,7 +38,7 @@
       }
 
       a {
-        color: #ffffff;
+        color: #0c1532;
         display: inline-block;
         height: $header-height;
         line-height: $header-height;
@@ -66,14 +65,14 @@
   }
 
   &__content {
-    color: #ffffff;
+    color: #0c1532;
     margin-top: $header-height;
     min-height: calc(100vh - #{$header-height} - #{$footer-height});
     padding: 50px 0;
   }
 
   &__footer {
-    color: #ffffff;
+    color: #0c1532;
     position: relative;
     height: $footer-height;
     p {
@@ -90,7 +89,7 @@
 
       display:block;
       svg {
-        fill: #ffffff;
+        fill: #0c1532;
         width: 50px;
         height: 50px;
         &:hover {
@@ -99,5 +98,21 @@
       }
     }
 
+  }
+  &.home {
+    .layout__header {
+      a,
+      nav a {
+        color: #ffffff;
+      }
+    }
+
+    .layout__footer {
+      color: #ffffff;
+
+      li a svg {
+        fill: #ffffff;
+      }
+    }
   }
 }

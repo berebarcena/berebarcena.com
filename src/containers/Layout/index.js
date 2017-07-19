@@ -19,7 +19,7 @@ class Layout extends Component {
   render() {
     const activePage = this.props.navigation.page;
     return (
-      <div id="app-wrapper" className="layout">
+      <div id="app-wrapper" className={`layout ${this.props.navigation.page}`}>
         <div id="header" className="layout__header">
           <div className="page-wrapper">
             <h1 className="logo">

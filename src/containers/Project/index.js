@@ -21,7 +21,7 @@ class Project extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.project.name !== nextProps.project.name) {
-      this.props.setActivePage(`${nextProps.project.name} | Projects | Bere B`, 'projects');
+      this.props.setActivePage(`${nextProps.project.name} | Projects | Bere B`, 'project');
     }
   }
 
