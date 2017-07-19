@@ -4,6 +4,7 @@
   font-family: $sans-serif-font;
 
 
+
   .page-wrapper {
     max-width: 960px;
     margin: 0 auto;
@@ -19,23 +20,12 @@
     z-index: 100;
 
     a {
-      color: #000000;
+      color: #ffffff;
     }
     .logo {
       float: left;
+      font-size: 18px;
 
-      img {
-        float: left;
-        margin-top: 6px;
-        margin-right: 5px;
-      }
-
-      a {
-        color: #333333;
-        font-size: 24px;
-        text-transform: none;
-        font-weight: normal;
-      }
     }
 
     nav {
@@ -49,7 +39,7 @@
       }
 
       a {
-        color: #000000;
+        color: #ffffff;
         display: inline-block;
         height: $header-height;
         line-height: $header-height;
@@ -76,13 +66,14 @@
   }
 
   &__content {
-    color: #484848;
+    color: #ffffff;
     margin-top: $header-height;
     min-height: calc(100vh - #{$header-height} - #{$footer-height});
     padding: 50px 0;
   }
 
   &__footer {
+    color: #ffffff;
     position: relative;
     height: $footer-height;
     p {
@@ -96,8 +87,10 @@
 
     }
     li a {
+
       display:block;
       svg {
+        fill: #ffffff;
         width: 50px;
         height: 50px;
         &:hover {

@@ -1,7 +1,8 @@
 .home {
+
   text-align: center;
   .pattern-undersea {
-    background-color:#b3ebee;
+    background-color:#245f7a;
     position: fixed;
     width: 100%;
     top:0;
@@ -10,6 +11,7 @@
     svg {
       width:100%;
       min-height: 100vh;
+      opacity: .8;
     }
 
   }
@@ -22,6 +24,10 @@
       font-size: 2em;
       padding: 1em 0;
       line-height: 1.7;
+      a {
+        color:#d5cf65;
+        text-decoration: none;
+      }
 
     }
   }
@@ -130,16 +136,24 @@
     opacity: 1;
     transform: none;
   }
-  80% {
-    transform: translate3d(90vw, 0, 0);
-    opacity: 0.95;
-  }
-  81% {
-    opacity: 0;
+  82% {
+    opacity: .7;
   }
   85% {
-    transform: translate3d(-18vw, 0, 0);
+    opacity: 0;
+    transform: translate3d(100vw, 0, 0);
   }
+  86% {
+    opacity: 0;
+  }
+  88% {
+    opacity: 0;
+    transform: translate3d(-15vw, 0, 0);
+  }
+
+  92%{
+    opacity: 0.7;
+    }
 }
 .move-right-from-left {
   animation: goRightfromL 18s linear infinite;
@@ -153,23 +167,28 @@
     opacity: 1;
     transform: none;
   }
+  12% {
+    opacity: .7;
+  }
   15% {
+    opacity: 0;
     transform: translate3d(18vw, 0, 0);
   }
   16% {
     opacity: 0;
   }
-  30% {
+  18% {
     opacity: 0;
     transform: translate3d(-90vw, 0, 0);
   }
-  35% {
-    opacity: .95;
+  20% {
+    opacity: 0.7;
   }
 }
 .move-right-from-right {
   animation: goRightfromR 18s linear infinite;
 }
+
 
 /*move and flip fish */
 @keyframes moveAndFlip {
