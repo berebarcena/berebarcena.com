@@ -2,7 +2,7 @@
 
   text-align: center;
   .pattern-undersea {
-    background-color:#245f7a;
+    background-color:#083957;
     position: fixed;
     width: 100%;
     top:0;
@@ -11,15 +11,18 @@
     svg {
       width:100%;
       min-height: 100vh;
-      opacity: .8;
+      opacity: .7;
     }
 
   }
   .intro-text {
-    width: 100%;
-    position:relative;
-    max-width: 34em;
-    margin: 0 auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50vw;
+
     p {
       font-size: 2em;
       padding: 1em 0;
@@ -225,4 +228,31 @@
     transform-origin: center;
 
   }
+}
+@keyframes bubbleUp{
+  0%{
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(0, -120vh, 0);
+  }
+
+}
+.bubbles {
+  fill:none;
+  opacity: .5;
+
+  circle:nth-child(1), circle:nth-child(4), circle:nth-child(6) {
+    animation: bubbleUp 15s linear infinite;
+  }
+  circle:nth-child(2), circle:nth-child(5), circle:nth-child(7) {
+    animation: bubbleUp 15s linear infinite;
+    animation-delay: 5s;
+  }
+  circle:nth-child(3), circle:nth-child(8) {
+    animation: bubbleUp 18s linear infinite;
+    animation-delay: 2s;
+  }
+
+
 }
